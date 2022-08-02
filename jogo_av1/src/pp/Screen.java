@@ -19,9 +19,8 @@ public class Screen{
 		this.turno = turno;
 		this.enemy_x = enemy_x;
 		this.enemy_y = enemy_y;
-		this.player_x = enemy_x;
-		this.player_y = enemy_y;
-
+		this.player_x = player_x;
+		this.player_y = player_y;
 		
 	}
 
@@ -39,12 +38,11 @@ public class Screen{
 				if (i == enemy_y && j == enemy_x){
 					System.out.print(".v.");
 					
-				} else if  (i == player_y && j == player_x){
+				} if  (i == player_y && j == player_x){
 					System.out.print("{°}");
 					
-				} else {
+				} 
 					System.out.print(" _|");
-				}
 			}
 			System.out.print("\n");
 			
