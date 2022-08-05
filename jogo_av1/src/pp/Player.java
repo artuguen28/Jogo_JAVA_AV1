@@ -13,19 +13,23 @@ public class Player {
 		switch (comand) {
 			case 6:
 				direct = "Right";
-				x_pos++;
+				if (x_pos >= 9) x_pos = 9;
+				else x_pos ++;
 				break;
 			case 8:
 				direct = "Up";
-				y_pos--;
+				if (y_pos <= 0) y_pos = 0;
+				else y_pos --;
 				break;
 			case 4:
 				direct = "Left";
-				x_pos--;
+				if (x_pos <= 0) x_pos = 0;
+				else x_pos --;
 				break;
 			case 2:
 				direct = "Down";
-				y_pos++;
+				if (y_pos >= 9) y_pos = 9;
+				else y_pos ++;
 				break;
 			default:
 				direct = "";
