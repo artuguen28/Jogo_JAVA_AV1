@@ -38,11 +38,12 @@ public class Screen{
 				if (i == enemy_y && j == enemy_x){
 					System.out.print(".v.");
 					
-				} if  (i == player_y && j == player_x){
+				} else if  (i == player_y && j == player_x){
 					System.out.print("{°}");
 					
-				} 
+				} else {
 					System.out.print(" _|");
+				}
 			}
 			System.out.print("\n");
 			
@@ -60,6 +61,11 @@ public class Screen{
 		System.out.println("|     2     |");
 		System.out.println("|     v     |");
 		System.out.println("|___________|");
+		System.out.println("\nCoord do player: x = "+player_x);
+		System.out.println("Coord do player: y = "+player_y);
+		System.out.println("\nCoord do enemy: x ="+enemy_x);
+		System.out.println("Coord do enemy: y = "+enemy_y);
+		
 		
 	}
 	
