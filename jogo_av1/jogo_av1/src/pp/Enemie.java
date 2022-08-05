@@ -42,6 +42,11 @@ public class Enemie {
 		System.out.println("Direction: " + direct);
 	}
 
+	public void updateXY() {
+		this.x_pos = random.nextInt(10);
+		this.y_pos = random.nextInt(6);
+	}
+
 	public int getX_pos() {
 		return x_pos;
 	}

@@ -1,6 +1,6 @@
 package pp;
 
-import java.util.concurrent.TimeUnit;
+//import java.util.concurrent.TimeUnit;
 
 public class Player {
 	
@@ -38,11 +38,13 @@ public class Player {
 		System.out.println("Direction: " + direct);
 	}
 	
-	public void shoot(int x_enemy, int y_enemy, int direct) {
+	public boolean shoot(int x_enemy, int y_enemy, int direct) {
 		
 		switch (direct) {
 			case 6:
+				System.out.print("6");
 				if (y_pos == y_enemy && x_pos < x_enemy) {
+					System.out.print("\n");
 					for(int i=0; i< 10; i++){
 						for(int j=0; j< 10; j++) {
 							
@@ -58,12 +60,15 @@ public class Player {
 						}
 						System.out.print("\n");
 					}
-					TimeUnit.SECONDS.sleep(1);
-				} else System.out.println("Missed!");
-				break;
-				
-			case 8:
+				return true;
+					//TimeUnit.SECONDS.sleep(1);
+				} else {
+					return false;
+				}
+		case 8:
+				System.out.print("8");
 				if (x_pos == x_enemy && y_pos > y_enemy) {
+					System.out.print("\n");
 					for(int i=0; i< 10; i++){
 						for(int j=0; j< 10; j++) {
 							
@@ -79,12 +84,16 @@ public class Player {
 						}
 						System.out.print("\n");
 					}	
-					TimeUnit.SECONDS.sleep(1);
-				} else System.out.println("Missed!");
-				break;
+				return true;
+					//TimeUnit.SECONDS.sleep(1);
+				} else {
+					return false;
+				}
 				
 			case 4:
+				System.out.print("4");
 				if (y_pos == y_enemy && x_pos > x_enemy) {
+					System.out.print("\n");
 					for(int i=0; i< 10; i++){
 						for(int j=0; j< 10; j++) {
 							
@@ -100,12 +109,17 @@ public class Player {
 						}
 						System.out.print("\n");
 					}
-					TimeUnit.SECONDS.sleep(1);
-				} else System.out.println("Missed!");
-				break;
+				return true;
+					//TimeUnit.SECONDS.sleep(1);
+				} else {
+					return false;
+				}
+
 				
 			case 2:
+				System.out.print("2");
 				if (x_pos == x_enemy && y_pos > y_enemy) {
+					System.out.print("\n");
 					for(int i=0; i< 10; i++){
 						for(int j=0; j< 10; j++) {
 							
@@ -121,12 +135,14 @@ public class Player {
 						}
 						System.out.print("\n");
 					}
-					TimeUnit.SECONDS.sleep(1);
-				} else System.out.println("Missed!");
-				break;
+				return true;
+					//TimeUnit.SECONDS.sleep(1);
+				} else {
+					return false;
+				}
 			
 			default:
-				System.out.println("Missed!");		
+				return false;
 		}
 	}
 

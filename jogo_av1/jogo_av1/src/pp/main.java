@@ -1,11 +1,15 @@
 package pp;
 
+import java.util.Random;
 import java.util.Scanner;
+//import java.util.concurrent.TimeUnit;
 
 public class main {
 
 	public static void main(String[] args) {
 		
+		Random random = new Random();
+		int x_pos = random.nextInt(10);
 		int comand = 1;
 		int vidas = 5;
 		int enemy_hp = 100;
@@ -29,7 +33,13 @@ public class main {
 				System.out.print("Shooting direction");
 				Scanner s = new Scanner(System.in);
 				dir = s.nextInt();
-				play.shoot(enem.getX_pos(), enem.getY_pos(), dir);
+				if(play.shoot(enem.getX_pos(), enem.getY_pos(), dir)) {
+					enemy_hp = enemy_hp - 10;
+					enem.updateXY();
+				}
+				else {
+					System.out.println("Missed!");
+				}
 			}
 		}
 		
