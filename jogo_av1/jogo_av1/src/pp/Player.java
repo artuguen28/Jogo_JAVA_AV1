@@ -1,12 +1,12 @@
 package pp;
 
-import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 public class Player {
 	
 	public String direct = "";
-	protected int x_pos;
-	protected int y_pos;
+	private int x_pos;
+	private int y_pos;
 
 	public void playerMove(int comand) {
 		
@@ -36,6 +36,98 @@ public class Player {
 				break;
 		}
 		System.out.println("Direction: " + direct);
+	}
+	
+	public void shoot(int x_enemy, int y_enemy, int direct) {
+		
+		switch (direct) {
+			case 6:
+				if (y_pos == y_enemy && x_pos < x_enemy) {
+					for(int i=0; i< 10; i++){
+						for(int j=0; j< 10; j++) {
+							
+							if (i == y_enemy && j == x_enemy){
+								System.out.print(" X|");
+								
+							} else if  (i == y_pos && j == x_pos){
+								System.out.print("{°}");
+								
+							} else {
+								System.out.print(" _|");
+							}
+						}
+						System.out.print("\n");
+					}
+					TimeUnit.SECONDS.sleep(1);
+				} else System.out.println("Missed!");
+				break;
+				
+			case 8:
+				if (x_pos == x_enemy && y_pos > y_enemy) {
+					for(int i=0; i< 10; i++){
+						for(int j=0; j< 10; j++) {
+							
+							if (i == y_enemy && j == x_enemy){
+								System.out.print(" X|");
+								
+							} else if  (i == y_pos && j == x_pos){
+								System.out.print("{°}");
+								
+							} else {
+								System.out.print(" _|");
+							}
+						}
+						System.out.print("\n");
+					}	
+					TimeUnit.SECONDS.sleep(1);
+				} else System.out.println("Missed!");
+				break;
+				
+			case 4:
+				if (y_pos == y_enemy && x_pos > x_enemy) {
+					for(int i=0; i< 10; i++){
+						for(int j=0; j< 10; j++) {
+							
+							if (i == y_enemy && j == x_enemy){
+								System.out.print(" X|");
+								
+							} else if  (i == y_pos && j == x_pos){
+								System.out.print("{°}");
+								
+							} else {
+								System.out.print(" _|");
+							}
+						}
+						System.out.print("\n");
+					}
+					TimeUnit.SECONDS.sleep(1);
+				} else System.out.println("Missed!");
+				break;
+				
+			case 2:
+				if (x_pos == x_enemy && y_pos > y_enemy) {
+					for(int i=0; i< 10; i++){
+						for(int j=0; j< 10; j++) {
+							
+							if (i == y_enemy && j == x_enemy){
+								System.out.print(" X|");
+								
+							} else if  (i == y_pos && j == x_pos){
+								System.out.print("{°}");
+								
+							} else {
+								System.out.print(" _|");
+							}
+						}
+						System.out.print("\n");
+					}
+					TimeUnit.SECONDS.sleep(1);
+				} else System.out.println("Missed!");
+				break;
+			
+			default:
+				System.out.println("Missed!");		
+		}
 	}
 
 	public int getX_pos() {

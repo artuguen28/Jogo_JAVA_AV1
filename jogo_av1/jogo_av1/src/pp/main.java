@@ -11,6 +11,7 @@ public class main {
 		int enemy_hp = 100;
 		int turno = 0;
 		int player_x = 6, player_y = 3;
+		int dir = 0;
 		Enemie enem = new Enemie();
 		Player play = new Player();
 		
@@ -21,7 +22,15 @@ public class main {
 			enem.enemieMove();
 			Scanner in = new Scanner(System.in);
 			comand = in.nextInt();
-			play.playerMove(comand);
+			if (comand == 2 || comand == 6  || comand == 8 || comand == 4) {
+				
+				play.playerMove(comand);
+			} else if (comand == 5) {
+				System.out.print("Shooting direction");
+				Scanner s = new Scanner(System.in);
+				dir = s.nextInt();
+				play.shoot(enem.getX_pos(), enem.getY_pos(), dir);
+			}
 		}
 		
 		System.out.print("You left the game!");
