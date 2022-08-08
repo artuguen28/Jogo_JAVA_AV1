@@ -7,6 +7,7 @@ public class Player {
 	public String direct = "";
 	private int x_pos;
 	private int y_pos;
+	private int dir = 2;
 
 	public void playerMove(int comand) {
 		
@@ -15,21 +16,25 @@ public class Player {
 				direct = "Right";
 				if (x_pos >= 9) x_pos = 9;
 				else x_pos ++;
+				dir = 6;
 				break;
 			case 8:
 				direct = "Up";
 				if (y_pos <= 0) y_pos = 0;
 				else y_pos --;
+				dir = 8;
 				break;
 			case 4:
 				direct = "Left";
 				if (x_pos <= 0) x_pos = 0;
 				else x_pos --;
+				dir = 4;
 				break;
 			case 2:
 				direct = "Down";
 				if (y_pos >= 9) y_pos = 9;
 				else y_pos ++;
+				dir = 2;
 				break;
 			default:
 				direct = "";
@@ -43,7 +48,7 @@ public class Player {
 		switch (direct) {
 			case 6:
 				System.out.print("6");
-				if (y_pos == y_enemy && x_pos < x_enemy) {
+				if ( x_pos < x_enemy && (y_pos == y_enemy ||  y_pos == (y_enemy + 1) || y_pos == (y_enemy - 1))) {
 					System.out.print("\n");
 					for(int i=0; i< 10; i++){
 						for(int j=0; j< 10; j++) {
@@ -67,7 +72,7 @@ public class Player {
 				}
 		case 8:
 				System.out.print("8");
-				if (x_pos == x_enemy && y_pos > y_enemy) {
+				if ( y_pos > y_enemy && (x_pos == x_enemy ||  x_pos == (x_enemy + 1) || x_pos == (x_enemy - 1))) {
 					System.out.print("\n");
 					for(int i=0; i< 10; i++){
 						for(int j=0; j< 10; j++) {
@@ -92,7 +97,7 @@ public class Player {
 				
 			case 4:
 				System.out.print("4");
-				if (y_pos == y_enemy && x_pos > x_enemy) {
+				if ( x_pos > x_enemy && (y_pos == y_enemy ||  y_pos == (y_enemy + 1) || y_pos == (y_enemy - 1))) {
 					System.out.print("\n");
 					for(int i=0; i< 10; i++){
 						for(int j=0; j< 10; j++) {
@@ -118,7 +123,7 @@ public class Player {
 				
 			case 2:
 				System.out.print("2");
-				if (x_pos == x_enemy && y_pos > y_enemy) {
+				if ( y_pos < y_enemy && (x_pos == x_enemy ||  x_pos == (x_enemy + 1) || x_pos == (x_enemy - 1))) {
 					System.out.print("\n");
 					for(int i=0; i< 10; i++){
 						for(int j=0; j< 10; j++) {

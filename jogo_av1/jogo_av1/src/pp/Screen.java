@@ -35,8 +35,20 @@ public class Screen{
 		for(i=0; i< 10; i++){
 			for(j=0; j< 10; j++) {
 				
-				if (i == enemy_y && j == enemy_x){
-					System.out.print(".v.");
+				if (i == (enemy_y + 1) && j == enemy_x){
+					System.out.print("{v}");
+					
+				}else if (i == (enemy_y - 1) && j == enemy_x){
+					System.out.print("{^}");
+					
+				}else if (i == (enemy_y) && j == (enemy_x + 1)){
+						System.out.print(" > ");
+						
+				}else if (i == (enemy_y) && j == (enemy_x - 1)){
+					System.out.print(" < ");
+					
+				}else if (i == enemy_y && j == enemy_x){
+					System.out.print("|O|");
 					
 				} else if  (i == player_y && j == player_x){
 					System.out.print("{°}");
