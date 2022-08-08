@@ -6,8 +6,8 @@ public class Enemie {
 	
 	Random random = new Random();
 	private String direct = "";
-	private int x_pos = random.nextInt(10);
-	private int y_pos = random.nextInt(6);
+	private int x_pos = 8;
+	private int y_pos = 8;
 
 	
 	public void enemieMove() {
@@ -43,8 +43,30 @@ public class Enemie {
 	}
 
 	public void updateXY() {
-		this.x_pos = random.nextInt(10);
-		this.y_pos = random.nextInt(6);
+		
+		int randomInt = random.nextInt(4);
+		
+		switch (randomInt) {
+			case 0:
+				this.x_pos = 1;
+				this.y_pos = 1;
+				break;
+				
+			case 1:
+				this.x_pos = 8;
+				this.y_pos = 1;
+				break;
+			case 2:
+				this.x_pos = 8;
+				this.y_pos = 8;
+				break;
+			case 3:
+				this.x_pos = 1;
+				this.y_pos = 8;
+				break;
+			default:
+				break;
+		}
 	}
 
 	public int getX_pos() {

@@ -1,9 +1,10 @@
 package pp;
 
-//import java.util.concurrent.TimeUnit;
+import java.util.Random;
 
 public class Player {
 	
+	Random random = new Random();
 	public String direct = "";
 	private int x_pos;
 	private int y_pos;
@@ -150,6 +151,18 @@ public class Player {
 				return false;
 		}
 	}
+	public boolean colision(int x_enemy, int y_enemy) {
+		if((x_pos == (x_enemy + 1) &&  y_pos == (y_enemy + 1)) || (x_pos == (x_enemy - 1) && (y_pos == (y_enemy - 1)))) {
+			return true;
+		}
+		else return false;
+	}
+	
+	public void updateXY() {
+		this.x_pos = random.nextInt(10);
+		this.y_pos = random.nextInt(10);
+	}
+
 
 	public int getX_pos() {
 		return x_pos;
@@ -159,6 +172,7 @@ public class Player {
 	public int getY_pos() {
 		return y_pos;
 	}
+	
 
 
 }

@@ -41,6 +41,13 @@ public class main {
 					System.out.println("Missed!");
 				}
 			}
+			if(play.colision(enem.getX_pos(), enem.getY_pos())) {
+				System.out.print("Colisão!");
+				vidas = vidas - 1;
+				enem.updateXY();
+				play.updateXY();
+			}
+			
 		}
 		
 		System.out.print("You left the game!");
