@@ -510,15 +510,20 @@ public class Player {
 		}
 	}
 	public boolean colision(int x_enemy, int y_enemy) {
-		if((x_pos == (x_enemy + 1) &&  y_pos == (y_enemy + 1)) || (x_pos == (x_enemy - 1) && (y_pos == (y_enemy - 1)))) {
+		if ((x_pos == (x_enemy + 1) &&  y_pos == (y_enemy)) || 
+			(x_pos == (x_enemy - 1) && y_pos == (y_enemy) ||
+			(x_pos == (x_enemy)) && y_pos == y_enemy - 1) ||
+		    (x_pos == (x_enemy)) && y_pos == y_enemy + 1 ||
+		    (x_pos == x_enemy && y_pos == y_enemy))
+		{
 			return true;
 		}
 		else return false;
 	}
 	
 	public void updateXY() {
-		this.x_pos = random.nextInt(10);
-		this.y_pos = random.nextInt(10);
+		this.x_pos = 0;
+		this.y_pos = 0;
 	}
 
 

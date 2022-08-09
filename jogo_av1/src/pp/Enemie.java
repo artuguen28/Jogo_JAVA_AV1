@@ -43,30 +43,10 @@ public class Enemie {
 
 	public void updateXY() {
 		
-		int randomInt = random.nextInt(4);
+		this.x_pos = 8;
+		this.y_pos = 8;
 		
-		switch (randomInt) {
-			case 0:
-				this.x_pos = 1;
-				this.y_pos = 1;
-				break;
-				
-			case 1:
-				this.x_pos = 8;
-				this.y_pos = 1;
-				break;
-			case 2:
-				this.x_pos = 8;
-				this.y_pos = 8;
-				break;
-			case 3:
-				this.x_pos = 1;
-				this.y_pos = 8;
-				break;
-			default:
-				break;
 		}
-	}
 
 	public int getX_pos() {
 		return x_pos;
