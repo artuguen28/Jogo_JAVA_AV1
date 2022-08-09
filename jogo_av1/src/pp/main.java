@@ -37,12 +37,8 @@ public class main {
 					enemy_hp = enemy_hp - 10;
 					enem.updateXY();
 				}
-				else {
-					System.out.println("Missed!");
-				}
 			}
 			if(play.colision(enem.getX_pos(), enem.getY_pos())) {
-				System.out.print("Colisão!");
 				vidas = vidas - 1;
 				enem.updateXY();
 				play.updateXY();

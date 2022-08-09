@@ -17,25 +17,21 @@ public class Player {
 		
 		switch (comand) {
 			case 6:
-				direct = "Right";
 				if (x_pos >= 9) x_pos = 9;
 				else x_pos ++;
 				dir = 6;
 				break;
 			case 8:
-				direct = "Up";
 				if (y_pos <= 0) y_pos = 0;
 				else y_pos --;
 				dir = 8;
 				break;
 			case 4:
-				direct = "Left";
 				if (x_pos <= 0) x_pos = 0;
 				else x_pos --;
 				dir = 4;
 				break;
 			case 2:
-				direct = "Down";
 				if (y_pos >= 9) y_pos = 9;
 				else y_pos ++;
 				dir = 2;
@@ -44,7 +40,6 @@ public class Player {
 				direct = "";
 				break;
 		}
-		System.out.println("Direction: " + direct);
 	}
 	
 	public boolean shoot(int x_enemy, int y_enemy, int direct) {
@@ -89,6 +84,7 @@ public class Player {
 						}
 						
 					}
+						
 				}
 					System.out.print("\n");
 				}
@@ -105,6 +101,12 @@ public class Player {
 				System.out.println("|     2     |");
 				System.out.println("|     v     |");
 				System.out.println("|___________|");
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				
 				
 				if ( x_pos < x_enemy && (y_pos == y_enemy ||  y_pos == (y_enemy + 1) || y_pos == (y_enemy - 1))) {
@@ -134,12 +136,7 @@ public class Player {
 						}
 						System.out.print("\n");
 					}
-					try {
-						Thread.sleep(3000);
-					} catch (InterruptedException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
+					
 					System.out.print("\n");
 					System.out.println("Turno: ");
 					System.out.print("\n");
@@ -152,6 +149,12 @@ public class Player {
 					System.out.println("|     2     |");
 					System.out.println("|     v     |");
 					System.out.println("|___________|");
+					try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 				return true;
 					//TimeUnit.SECONDS.sleep(1);
 				} else {
@@ -212,6 +215,12 @@ public class Player {
 			System.out.println("|     2     |");
 			System.out.println("|     v     |");
 			System.out.println("|___________|");
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 
 				
 				if ( y_pos > y_enemy && (x_pos == x_enemy ||  x_pos == (x_enemy + 1) || x_pos == (x_enemy - 1))) {
@@ -257,6 +266,12 @@ public class Player {
 					System.out.println("|     2     |");
 					System.out.println("|     v     |");
 					System.out.println("|___________|");
+					try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 				return true;
 					//TimeUnit.SECONDS.sleep(1);
 				} else {
@@ -316,6 +331,12 @@ public class Player {
 				System.out.println("|     2     |");
 				System.out.println("|     v     |");
 				System.out.println("|___________|");
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				
 				if ( x_pos > x_enemy && (y_pos == y_enemy ||  y_pos == (y_enemy + 1) || y_pos == (y_enemy - 1))) {
 					
@@ -357,6 +378,12 @@ public class Player {
 					System.out.println("|     2     |");
 					System.out.println("|     v     |");
 					System.out.println("|___________|");
+					try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 				return true;
 					//TimeUnit.SECONDS.sleep(1);
 				} else {
@@ -418,6 +445,12 @@ public class Player {
 				System.out.println("|     2     |");
 				System.out.println("|     v     |");
 				System.out.println("|___________|");
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				
 				if ( y_pos < y_enemy && (x_pos == x_enemy ||  x_pos == (x_enemy + 1) || x_pos == (x_enemy - 1))) {
 					
@@ -460,6 +493,12 @@ public class Player {
 					System.out.println("|     2     |");
 					System.out.println("|     v     |");
 					System.out.println("|___________|");
+					try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 				return true;
 					//TimeUnit.SECONDS.sleep(1);
 				} else {
