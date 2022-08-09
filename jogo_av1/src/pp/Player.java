@@ -1,6 +1,8 @@
 package pp;
 
 import java.util.Random;
+import java.io.*;
+import java.lang.Thread;
 
 
 public class Player {
@@ -49,6 +51,12 @@ public class Player {
 		
 		switch (direct) {
 			case 6:
+				System.out.print("\n\n\n");
+				
+				System.out.println("Player <3: [] | Enemy HP: []");
+				
+				System.out.print("\n");
+				
 				for(int e=0; e< 10; e++){
 					for(int k=0; k < 10; k++) {
 						if (e == y_pos && k > x_pos && k <= 9){
@@ -84,9 +92,29 @@ public class Player {
 				}
 					System.out.print("\n");
 				}
+				
 				System.out.print("\n");
+				System.out.println("Turno: ");
+				System.out.print("\n");
+				System.out.println("GAME CONTROLS: ");
+				System.out.println(" ___________");
+				System.out.println("|           |");
+				System.out.println("|     ^     |");
+				System.out.println("|     8     |");
+				System.out.println("|< 4     6 >|");
+				System.out.println("|     2     |");
+				System.out.println("|     v     |");
+				System.out.println("|___________|");
+				
+				
 				if ( x_pos < x_enemy && (y_pos == y_enemy ||  y_pos == (y_enemy + 1) || y_pos == (y_enemy - 1))) {
+
+					System.out.print("\n\n\n");
+					
+					System.out.println("Player <3: [] | Enemy HP: []");
+					
 					System.out.print("\n");
+					
 					for(int i=0; i< 10; i++){
 						for(int j=0; j< 10; j++) {
 							if (i == y_enemy && j == x_enemy){
@@ -105,13 +133,38 @@ public class Player {
 							}
 						}
 						System.out.print("\n");
-					}	
+					}
+					try {
+						Thread.sleep(3000);
+					} catch (InterruptedException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					System.out.print("\n");
+					System.out.println("Turno: ");
+					System.out.print("\n");
+					System.out.println("GAME CONTROLS: ");
+					System.out.println(" ___________");
+					System.out.println("|           |");
+					System.out.println("|     ^     |");
+					System.out.println("|     8     |");
+					System.out.println("|< 4     6 >|");
+					System.out.println("|     2     |");
+					System.out.println("|     v     |");
+					System.out.println("|___________|");
 				return true;
 					//TimeUnit.SECONDS.sleep(1);
 				} else {
 					return false;
 				}
+				
 		case 8:
+			System.out.print("\n\n\n");
+			
+			System.out.println("Player <3: [] | Enemy HP: []");
+			
+			System.out.print("\n");
+			
 			for(int e=0; e< 10; e++){
 				for(int k=0; k < 10; k++) {
 					if (k == x_pos && e < y_pos && e >= 0){
@@ -148,9 +201,27 @@ public class Player {
 				System.out.print("\n");
 			}
 			System.out.print("\n");
+			System.out.println("Turno: ");
+			System.out.print("\n");
+			System.out.println("GAME CONTROLS: ");
+			System.out.println(" ___________");
+			System.out.println("|           |");
+			System.out.println("|     ^     |");
+			System.out.println("|     8     |");
+			System.out.println("|< 4     6 >|");
+			System.out.println("|     2     |");
+			System.out.println("|     v     |");
+			System.out.println("|___________|");
+
 				
 				if ( y_pos > y_enemy && (x_pos == x_enemy ||  x_pos == (x_enemy + 1) || x_pos == (x_enemy - 1))) {
+					
+					System.out.print("\n\n\n");
+					
+					System.out.println("Player <3: [] | Enemy HP: []");
+					
 					System.out.print("\n");
+					
 					for(int i=0; i< 10; i++){
 						for(int j=0; j< 10; j++) {
 							
@@ -173,7 +244,19 @@ public class Player {
 							}
 						}
 						System.out.print("\n");
-					}	
+					}
+					System.out.print("\n");
+					System.out.println("Turno: ");
+					System.out.print("\n");
+					System.out.println("GAME CONTROLS: ");
+					System.out.println(" ___________");
+					System.out.println("|           |");
+					System.out.println("|     ^     |");
+					System.out.println("|     8     |");
+					System.out.println("|< 4     6 >|");
+					System.out.println("|     2     |");
+					System.out.println("|     v     |");
+					System.out.println("|___________|");
 				return true;
 					//TimeUnit.SECONDS.sleep(1);
 				} else {
@@ -181,6 +264,12 @@ public class Player {
 				}
 				
 			case 4:
+				System.out.print("\n\n\n");
+				
+				System.out.println("Player <3: [] | Enemy HP: []");
+				
+				System.out.print("\n");
+				
 				for(int e=0; e< 10; e++){
 					for(int k=0; k < 10; k++) {
 						if (e == y_pos && k < x_pos && k >= 0){
@@ -216,8 +305,26 @@ public class Player {
 					System.out.print("\n");
 				}
 				System.out.print("\n");
+				System.out.println("Turno: ");
+				System.out.print("\n");
+				System.out.println("GAME CONTROLS: ");
+				System.out.println(" ___________");
+				System.out.println("|           |");
+				System.out.println("|     ^     |");
+				System.out.println("|     8     |");
+				System.out.println("|< 4     6 >|");
+				System.out.println("|     2     |");
+				System.out.println("|     v     |");
+				System.out.println("|___________|");
+				
 				if ( x_pos > x_enemy && (y_pos == y_enemy ||  y_pos == (y_enemy + 1) || y_pos == (y_enemy - 1))) {
+					
+					System.out.print("\n\n\n");
+					
+					System.out.println("Player <3: [] | Enemy HP: []");
+					
 					System.out.print("\n");
+					
 					for(int i=0; i< 10; i++){
 						for(int j=0; j< 10; j++) {
 							
@@ -238,6 +345,18 @@ public class Player {
 						}
 						System.out.print("\n");
 					}
+					System.out.print("\n");
+					System.out.println("Turno: ");
+					System.out.print("\n");
+					System.out.println("GAME CONTROLS: ");
+					System.out.println(" ___________");
+					System.out.println("|           |");
+					System.out.println("|     ^     |");
+					System.out.println("|     8     |");
+					System.out.println("|< 4     6 >|");
+					System.out.println("|     2     |");
+					System.out.println("|     v     |");
+					System.out.println("|___________|");
 				return true;
 					//TimeUnit.SECONDS.sleep(1);
 				} else {
@@ -246,6 +365,12 @@ public class Player {
 
 				
 			case 2:
+				System.out.print("\n\n\n");
+				
+				System.out.println("Player <3: [] | Enemy HP: []");
+				
+				System.out.print("\n");
+				
 				for(int e=0; e< 10; e++){
 					for(int k=0; k < 10; k++) {
 						if (k == x_pos && e > y_pos && e <= 9){
@@ -282,9 +407,26 @@ public class Player {
 					System.out.print("\n");
 				}
 				System.out.print("\n");
+				System.out.println("Turno: ");
+				System.out.print("\n");
+				System.out.println("GAME CONTROLS: ");
+				System.out.println(" ___________");
+				System.out.println("|           |");
+				System.out.println("|     ^     |");
+				System.out.println("|     8     |");
+				System.out.println("|< 4     6 >|");
+				System.out.println("|     2     |");
+				System.out.println("|     v     |");
+				System.out.println("|___________|");
 				
 				if ( y_pos < y_enemy && (x_pos == x_enemy ||  x_pos == (x_enemy + 1) || x_pos == (x_enemy - 1))) {
+					
+					System.out.print("\n\n\n");
+					
+					System.out.println("Player <3: [] | Enemy HP: []");
+					
 					System.out.print("\n");
+					
 					for(int i=0; i< 10; i++){
 						for(int j=0; j< 10; j++) {
 							
@@ -306,6 +448,18 @@ public class Player {
 						}
 						System.out.print("\n");
 					}
+					System.out.print("\n");
+					System.out.println("Turno: ");
+					System.out.print("\n");
+					System.out.println("GAME CONTROLS: ");
+					System.out.println(" ___________");
+					System.out.println("|           |");
+					System.out.println("|     ^     |");
+					System.out.println("|     8     |");
+					System.out.println("|< 4     6 >|");
+					System.out.println("|     2     |");
+					System.out.println("|     v     |");
+					System.out.println("|___________|");
 				return true;
 					//TimeUnit.SECONDS.sleep(1);
 				} else {

@@ -39,7 +39,6 @@ public class Enemie {
 				direct = "";
 				break;
 		}
-		System.out.println("Direction: " + direct);
 	}
 
 	public void updateXY() {
