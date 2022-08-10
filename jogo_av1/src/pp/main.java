@@ -22,10 +22,6 @@ public class main {
 		
 		while(comand != 0) {
 			Screen sc = new Screen(vidas, enemy_hp, comand, turno, enem.getY_pos(), enem.getX_pos(), play.getX_pos(), play.getY_pos());
-			System.out.print("X do player: "+ play.getX_pos() + "\n");
-			System.out.print("Y do player: "+ play.getY_pos() + "\n");
-			System.out.print("X do enemy: "+ enem.getX_pos() + "\n");
-			System.out.print("Y do enemy: "+ enem.getY_pos() + "\n");
 			sc.showScreen();
 			turno ++;
 			Scanner in = new Scanner(System.in);
