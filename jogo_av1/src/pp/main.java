@@ -13,7 +13,7 @@ public class main {
 		int comand = 1;
 		int comand_1 = 0;
 		int vidas = 5;
-		int enemy_hp = 10;
+		int enemy_hp = 100;
 		int turno = 0;
 		int player_x = 6, player_y = 3;
 		int dir = 0;
@@ -29,16 +29,18 @@ public class main {
 			sc.showScreen();
 			turno ++;
 			Scanner in = new Scanner(System.in);
-			comand = in.nextInt();
+			
 			
 			if(play.colision(enem.getX_pos(), enem.getY_pos())) {
 				vidas = vidas - 1;
 				enem.updateXY();
 				play.updateXY();
+				
 			}
 			
 			else
 			{
+				comand = in.nextInt();
 				if (comand == 2 || comand == 6  || comand == 8 || comand == 4) {
 					play.playerMove(comand);
 					
